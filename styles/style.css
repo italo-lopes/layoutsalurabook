@@ -1,0 +1,45 @@
+/*
+ja to usando uma folha de estilo tirando todos os padrao de estilo.
+*{
+    margin: 0;
+    padding: 0;
+}
+*/
+/* no topo da pagina e pega usando o @import */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Poppins&display=swap');
+@import url("header.css");
+@import url("banner.css");
+@import url("carrosel.css");
+@import url("titulos.css");
+@import url("contato.css");
+@import url("rodape.css");
+
+:root{
+    --cor-de-fundo: #FFFFFF;
+    --cor-do-retangulo: #EBECEE;
+    --laranja-texto: #EB9B00;
+    --cor-fundo-carrosel: #EBECEE;
+    --azul-texto: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --fontes-principal: 'Poppins', sans-serif;
+    --cor-baner : linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+
+    --cor-do-botao : #EB9B00;
+    --cor-do-subtitulo: #002f52;
+
+    --font-titulo-menu: 'Josefin Sans', sans-serif;
+
+    --cor-rodape-titulo : #858585;
+    --cor-rodape-link : #474646;
+    --cor-preta : #000000;
+
+
+}
+body{
+    background-color: var(--cor-do-retangulo);
+    font-family: var(--fontes-principal);
+    font-weight:400;
+    font-size: 1rem;
+}
+ul{
+    background-color: var(--cor-de-fundo);
+}

@@ -1,0 +1,230 @@
+.carrosel{
+    background-color:  var(--cor-do-retangulo);
+}
+
+.carrosel__titulo{
+    text-align: center;
+    padding: 1rem 0em;
+    font-family: var(--fontes-principal);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--laranja-texto);
+    background-color: var(--cor-de-fundo);
+}
+.carrosel__conteudo{  
+    background-color: var(--cor-fundo-carrosel)
+}
+
+.swiper-slide img{
+    width: 100%;
+}
+
+.swiper-button-prev, .swiper-button-next, .swiper-scrollbar{
+    display: none;
+}
+
+/* mudar para o modo de cima quando  o atributo tiver embaixo*/ 
+.swiper-pagination{
+     position: initial; 
+     margin-bottom: 0.4rem; 
+      
+}
+
+.swiper{
+    padding: 0.4rem 0;
+    background-color: var(--cor-fundo-carrosel);
+}
+
+
+/* minhas config */
+.cards{
+    padding: 1.25rem 1rem;  
+    background-color: var(--cor-do-retangulo); 
+}
+.cards__info{
+    display: flex;  
+    justify-content: space-between;
+    padding: 1.25rem 1rem;
+    background-color: var(--cor-de-fundo); 
+    border-radius: 15px;
+    box-shadow: 0px 10px 5px lightblue;
+    /* height: 17.5rem; */
+    box-sizing: border-box;
+}
+
+.cards__info__texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+     width: 68%; 
+}
+
+.cards_ancora{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cards__info__img{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;     
+    overflow: hidden;
+    /* margin-left: 1.5rem; */
+
+}
+.cards__button{
+    /* margin-top: 0.2rem ; */
+    padding: 0.8rem 0.6rem;
+    background-color: var(--laranja-texto);
+    text-decoration: none;
+    color: var(--cor-de-fundo);
+    margin-top: 0.4rem;
+}
+
+
+.cards__titulo, .cards__subtitulo{
+    color: var(--cor-do-botao);
+    font-family: var(--fontes-principal);
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 24px;
+    margin: 0.2rem 0;
+}
+.cards__subtitulo{
+    font-size: 1.1rem;
+    color: var(--cor-do-subtitulo);
+    line-height: 24px;
+    margin: 0.2rem 0;
+}
+
+.cards__texto{
+    font-family: var(--fontes-principal);
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 21px;
+    margin-bottom: 0.5rem;
+}
+
+
+
+/* config do novo__cards */
+.novo__cards{
+    margin: 1rem 1em;
+    background-color: var(--cor-de-fundo);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 1rem;
+}
+.novo__cards__descricao{
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+.novo__descricao__titulo{
+    color: var(--cor-do-botao);
+    font-family: var(--fontes-principal);
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 24px;
+    margin: 0.5rem 0;
+}
+.novo__descricao__titulo-livro{
+    color: var(--cor-do-subtitulo);
+    font-family: var(--fontes-principal);
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 27px;
+    margin: 0.2rem 0;
+}
+.novo__descricao__texto{
+    font-size: 0.9rem;
+    line-height: 24px;
+    margin-bottom: 1rem;
+}
+.novo__cards__botoes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.botoes{
+    display: flex;
+
+}
+.botoes__ancora{
+    background-color: var(--cor-do-botao);  
+    padding: 1rem 2.2rem; 
+    align-items: center;
+    color: var(--cor-de-fundo);
+   font-weight: 700;
+   text-decoration: none;
+}
+
+.diferente{
+    position: absolute; 
+    margin-bottom: 0.4rem; 
+
+}
+.estrelinhas{
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 1024px){
+        .carrosel__titulo{
+            padding-top: 1rem;
+        }
+        .swiper-pagination{
+            margin: 0.5em 0rem 2.5em 0em;  
+       }
+        .swiper{
+            margin: 0rem auto;
+            width: 60%;
+        }      
+        .swiper-button-prev,
+        .swiper-button-next{
+            display:block;  
+        }
+        .cards{
+            width:45%;
+            margin: 0 auto;
+        }
+        .novo__cards{
+            width:45%;
+            margin: 2em auto;
+        }
+}
+
+@media  screen and (min-width: 1728px) {
+    .carrosel__container__1728{
+        display:flex;
+        align-items: center;
+        margin: 2em 15vw 2em 15vw;
+    }
+    .swiper{
+        width:45%;
+    }
+    .swiper-pagination{
+        margin: 0.5em 0rem 1.5em 0em;  
+   }
+   .cards {
+    margin-left: 1em;
+    width: 50%;
+   }
+   .cards__titulo{
+    font-size: 1.3em;
+   }
+   .novo__cards{
+    margin-left: 1em;
+    width: 50%;
+   }
+   .novo__descricao__titulo{
+    font-size: 1.3em;
+
+   }
+   .extra__card{
+    display:none;
+   }
+}

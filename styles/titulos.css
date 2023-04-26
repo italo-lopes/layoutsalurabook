@@ -1,0 +1,97 @@
+
+.lista__titulo{
+    background: var(--cor-baner);
+    color: var(--cor-de-fundo);
+    padding: 1.5rem 0;
+    display: flex; 
+    flex-direction: column;
+    margin-bottom: 2em;
+    /* display: none; */
+}
+
+.lista__titulo__tema{
+    color: var(--cor-de-fundo);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+
+.titulo-item{
+    color: var(--cor-de-fundo);
+}
+
+.titulo__variados{
+    background: var(--cor-baner);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    color: var(--cor-de-fundo); 
+    margin: 0.9rem;   
+}
+
+.titulo-lista{
+    background-color: var(--cor-do-botao);   
+    color: var(--cor-de-fundo);
+    padding:  1rem 0.8rem;
+    
+}
+.titulo-name{
+    color: var(--cor-de-fundo);
+    text-decoration: none;
+
+}
+
+/* feito de outra maneira*/
+.novo_topicos_v{
+    background: var(--cor-baner);
+    text-align: center;
+    padding: 1rem 0.5rem;
+}
+
+.topicos__titulo{
+    color: var(--cor-de-fundo);
+    font-weight: 400;
+}
+.topicos__lista{
+    background: var(--cor-baner);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.topicos__item{
+    margin: 2em 0.5em;
+}
+.topicos__link{
+    color:var(--cor-de-fundo);
+    padding: 1rem;
+    background-color: var(--cor-do-botao);
+    text-decoration: none;
+    font-size: 0.9;
+    font-weight: 700;
+}
+
+.abrir__details{
+    margin: 2rem 0rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .titulo__variados{
+        font-size: 24px;
+        margin: 0em auto;
+
+    }
+    .topicos__link{
+        font-size: 24px;
+    }
+}   
+
+@media screen and (min-width: 1728px){
+    .novo_topicos_v{
+        padding: 3rem 30vw;
+    }
+    .lista__titulo{
+        display: none;
+    }
+}

@@ -1,0 +1,230 @@
+/* é um sapn uma tag com fundo na imgaem*/
+.cabecalho__menu-hamburger{
+    width: 36px;
+    height: 49px;
+    background-image: url("../assets/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    /* margin-left: 12px; */
+     display: inline-block;
+}
+.cabecalho{
+    background-color: var(--cor-de-fundo);
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    /* libera top , left , right bottom */
+    /* precisa dele pro absolute funcionar o movimento vai ser em relação a ele */
+  
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* align-items: flex-start; */
+    flex-wrap: wrap;
+    /* position: relative; */
+}
+.container__imagem{
+    padding: 0 0.5rem;
+
+}
+/* Item fixo é bom separar manualmente */
+.lista-menu{
+    display: none;
+    position: absolute;
+    width: 60vw;
+    top: 100%;
+    left: 0%;
+    z-index: 2;
+    /* left: 7%; */
+    /* left: 2rem;   */
+    /* 
+    Precisa que o pai seja relative e assim posso usar o absolute 
+    pq assim posso dizer para o absolue acompanhar seu pai.
+    */
+}
+.container__botao:checked ~ .lista-menu{
+    display: flex;
+    flex-direction: column;
+    /* padding: 0 0.5rem; */
+
+}
+
+/*mudar o menu hamburguer de uma imagem para outra
+1. muda a  imgem span e depois a cor do fundo do label
+*/
+.container__botao:checked ~ .container__rotulo > .cabecalho__menu-hamburger{
+        background-image: url("../assets/MenuAberto.svg");
+}
+
+.container__botao:checked ~ .container__rotulo{
+    background: var(--cor-baner);
+}
+/*fim*/
+
+.lista-menu__titulo{
+    width: 25%;
+    padding: 0.7rem;
+    color: var(--laranja-texto);
+    font-family:  var(--fontes-principal);
+    font-weight: 700;
+    font-size : 1rem;
+}
+.lista-menu__item{
+    /* padding: 1rem; */
+    padding: 0.4rem 0 1rem  1rem;
+    width: 57vw;
+    /* color: var(--azul-texto); */
+    font-family:  var(--fontes-principal);
+    font-weight: 400;
+    font-size : 1rem;
+    
+}
+
+.lista-menu__item:hover{
+    background-color: #00ffff;    
+    width: auto;
+}
+.lista-menu__link{
+    display: inline-block;
+    width: 100%;
+    background: var(--azul-texto);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* aplica so no texto a co r*/
+    text-decoration: none;
+    text-transform: uppercase;
+    /* transforma o texto todo em maiusculo*/
+}
+.container__botao{
+    display: none;
+}
+.container__titulo, .opcao{
+    display: none;
+}
+
+.container__texto{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    .container__titulo{
+            display: block;
+            margin-top: 0.9rem;
+            font-family: var(--font-titulo-menu);
+            font-weight: 400;
+            font-size: 1.7rem;
+    }
+
+    .container__alura-negrito{
+        font-weight: 700;
+    }
+    .opcao{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;  
+    }
+    .opcao__item{
+        padding: 1.16rem;
+        text-transform: uppercase;
+    }
+    .opcao__item-item{
+        text-decoration: none;
+        color: #000000;
+    }
+    .desaparece__imagem,
+    .cabecalho__menu-hamburger,
+    .container__botao,
+    .lista-menu__titulo,
+    .container__botao__categoria{
+        display: none;
+    }
+    /* .desaparece__imagem{
+        display:none;
+    }
+    .cabecalho__menu-hamburger{
+        display:none;
+    }
+    .container__botao{
+        display: none;
+    }
+    .lista-menu__titulo{
+        display: none;
+    } */
+    .opcao{
+        position: relative;
+        left: 5%;
+    }
+    .nav__botao{
+        display: none;
+    }
+    .lista-menu{    
+        left: 0%;
+        width: auto;
+    }
+    .lista-menu__item{
+        width: auto;    
+        color: var(--cor-de-fundo);
+    }
+    .nav__botao:checked ~ .lista-menu{
+        display:block;
+    }
+    .nav__botao:checked ~ label>.opcao__item{
+          background:  var(--cor-baner);
+          color: var(--cor-de-fundo);
+          text-decoration: none;
+          text-transform: uppercase;
+          padding: 1.16rem;
+    }
+    .lista-menu__item{
+        padding: 0.3em 1em;
+    }
+    .lista-menu__link{
+        margin-right: 2rem;
+        padding: 0.2rem 0em;
+    }
+    .lista-menu__item:hover{
+        background: var(--azul-texto);
+    }
+    .lista-menu__item:hover > .lista-menu__link{
+        -webkit-text-fill-color: var(--cor-de-fundo) ;
+       /*
+       -webkit-text-fill-color: var(--cor-de-fundo)
+       aplica a cor no texto quando ja tiver com a configuração de degrade 
+       background: var(--cor-de-fundo);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text; 
+        
+        aplica so no texto a co r*/
+    }
+    .opcao{
+        text-align: start;
+    }
+} 
+
+@media screen and (min-width: 1728px){
+    .container__texto{
+        display: block;
+    }
+    .container__link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--cor-preta);
+    }
+    .cabecalho{
+        padding: 0 2em;
+    }
+    .opcao{
+        margin-right: auto;
+        /* 
+            quando colocando em um atributo que é um flex align-items
+            ele empurra 
+        */
+    }
+} 

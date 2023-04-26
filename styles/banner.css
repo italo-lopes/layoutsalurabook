@@ -1,0 +1,93 @@
+.banner{
+    background: var(--cor-baner); /* nao uso o liner gradiente por que */
+    color: var(--cor-de-fundo);
+    text-align: center;
+    padding: 1rem;
+}
+
+.banner_titulo{
+    font-family: var(--fontes-principal);
+    font-weight:700;
+    font-size: 1rem;
+    padding: 1rem;
+}
+.banner__texto{
+    text-align: center;
+    margin: 0 2rem;
+}
+.banner__search{
+
+    margin: 1rem;
+    padding: 0.5rem 2.8rem;
+    border-radius: 22px;
+    border: 1px solid var(--cor-de-fundo);
+     width: 84vw; 
+     background: var(--cor-baner);
+     color: var(--cor-de-fundo);
+     font-family: var(--fontes-principal);
+     font-weight:400;
+     font-size: 0.85em;
+     /*
+     background-color: red;
+     background-image: url("../assets/Vector.svg") no-repeat;;
+     */
+}
+
+.banner__search::placeholder {    
+    font-family: var(--fontes-principal);
+    font-weight:400;
+    font-size: 0.85em;
+    color: var(--cor-de-fundo);
+    text-align: center;
+    background-image: url("../assets/Vector.svg");
+    background-repeat: no-repeat;
+    /*background-position: 1rem; se precisar movimentar*/
+}
+/*
+.label__pesquisa{
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.label__pesquisa::after {
+	
+	content:  url("../assets/Vector.svg");
+	left: 2rem;
+	position: absolute;
+	top: 39%;
+}
+*/
+ /*
+background-color: red;
+background-image: url("../assets/Vector.svg") no-repeat;;
+*/
+
+@media screen and (min-width: 1024px) {
+    .banner_titulo{
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .banner__texto{
+        font-weight: 400;
+        font-size: 0.7rem;
+    }
+
+    .banner__search{
+        width: 40vw; 
+    }
+    .banner__search::placeholder{
+        background-position: 2rem;
+    }
+    .swiper{
+        margin: 4rem;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .banner__search{
+        width: 25%;
+    }
+    
+}
